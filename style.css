@@ -1,7 +1,7 @@
 /*
-Theme Name: Miry
+Theme Name: miry
 
-Description: Miry is a modernized take on an ever-popular WordPress layout — the horizontal masthead with an optional right sidebar that works perfectly for blogs and websites. It has custom color options with beautiful default color schemes, a harmonious fluid grid using a mobile-first approach, and impeccable polish in every detail. miry will make your WordPress look beautiful everywhere.
+Description: miry is a modernized take on an ever-popular WordPress layout — the horizontal masthead with an optional right sidebar that works perfectly for blogs and websites. It has custom color options with beautiful default color schemes, a harmonious fluid grid using a mobile-first approach, and impeccable polish in every detail. miry will make your WordPress look beautiful everywhere.
 Version: 1.2
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -47,6 +47,47 @@ Use it to make something cool, have fun, and share what you've learned with othe
  *    14.5 - >= 1200px
  * 15.0 - Print
  */
+
+ 
+@font-face {
+    font-family: 'helveticaneuecyrblack';
+    src: url('fonts/helveticaneuecyr-black-webfont.eot');
+    src: url('fonts/helveticaneuecyr-black-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/helveticaneuecyr-black-webfont.woff2') format('woff2'),
+         url('fonts/helveticaneuecyr-black-webfont.woff') format('woff'),
+         url('fonts/helveticaneuecyr-black-webfont.ttf') format('truetype'),
+         url('fonts/helveticaneuecyr-black-webfont.svg#helveticaneuecyrblack') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'helveticaneuecyrbold';
+    src: url('fonts/helveticaneuecyr-bold-webfont.eot');
+    src: url('fonts/helveticaneuecyr-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/helveticaneuecyr-bold-webfont.woff2') format('woff2'),
+         url('fonts/helveticaneuecyr-bold-webfont.woff') format('woff'),
+         url('fonts/helveticaneuecyr-bold-webfont.ttf') format('truetype'),
+         url('fonts/helveticaneuecyr-bold-webfont.svg#helveticaneuecyrbold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'helveticaneuecyrmedium';
+    src: url('fonts/helveticaneuecyr-medium-webfont.eot');
+    src: url('fonts/helveticaneuecyr-medium-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/helveticaneuecyr-medium-webfont.woff2') format('woff2'),
+         url('fonts/helveticaneuecyr-medium-webfont.woff') format('woff'),
+         url('fonts/helveticaneuecyr-medium-webfont.ttf') format('truetype'),
+         url('fonts/helveticaneuecyr-medium-webfont.svg#helveticaneuecyrmedium') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
 
 
 /**
@@ -292,10 +333,11 @@ input,
 select,
 textarea {
 	color: #1a1a1a;
-	font-family: Merriweather, Georgia, serif;
-	font-size: 16px;
-	font-size: 1rem;
-	line-height: 1.75;
+	font-family: 'helveticaneuecyrmedium', Helvetica, Arial, sans-serif;
+/*	font-size: 16px;
+	font-size: 0.875rem;*/
+	font-size: 0.9rem;
+    line-height: 1.6;
 }
 
 h1,
@@ -306,6 +348,7 @@ h5,
 h6 {
 	clear: both;
 	font-weight: 700;
+    color: #393939;
 	margin: 0;
 	text-rendering: optimizeLegibility;
 }
@@ -448,10 +491,14 @@ html {
 	-moz-box-sizing: inherit;
 	box-sizing: inherit;
 }
-
+html{
+    margin-top: 0!important;
+    padding-top: 0!important;
+}
 body {
-	background: #1a1a1a;
-	/* Fallback for when there is no custom background color defined. */
+    margin-top: 0;!important;
+    padding-top: 0;!important;
+    display: block;
 }
 
 hr {
@@ -545,24 +592,24 @@ td {
 /* Placeholder text color -- selectors need to be separate to work. */
 ::-webkit-input-placeholder {
 	color: #686868;
-	font-family: Montserrat, "Helvetica Neue", sans-serif;
+	font-family: 'helveticaneuecyrmedium', Helvetica, Arial, sans-serif;
 }
 
 :-moz-placeholder {
 	color: #686868;
-	font-family: Montserrat, "Helvetica Neue", sans-serif;
+	font-family: 'helveticaneuecyrmedium', Helvetica, Arial, sans-serif;
 }
 
 ::-moz-placeholder {
 	color: #686868;
-	font-family: Montserrat, "Helvetica Neue", sans-serif;
+	font-family: 'helveticaneuecyrmedium', Helvetica, Arial, sans-serif;
 	opacity: 1;
 	/* Since FF19 lowers the opacity of the placeholder by default */
 }
 
 :-ms-input-placeholder {
 	color: #686868;
-	font-family: Montserrat, "Helvetica Neue", sans-serif;
+	font-family: 'helveticaneuecyrmedium', Helvetica, Arial, sans-serif;
 }
 
 
@@ -590,7 +637,7 @@ input[type="submit"][disabled]:focus {
 	border: 0;
 	border-radius: 2px;
 	color: #fff;
-	font-family: Montserrat, "Helvetica Neue", sans-serif;
+	font-family: 'helveticaneuecyrmedium', Helvetica, Arial, sans-serif;
 	font-weight: 700;
 	letter-spacing: 0.046875em;
 	line-height: 1;
@@ -655,7 +702,7 @@ textarea:focus {
 .post-password-form label {
 	color: #686868;
 	display: block;
-	font-family: Montserrat, "Helvetica Neue", sans-serif;
+	font-family: 'helveticaneuecyrmedium', Helvetica, Arial, sans-serif;
 	font-size: 13px;
 	font-size: 0.8125rem;
 	letter-spacing: 0.076923077em;
@@ -779,7 +826,7 @@ a:active {
 }
 
 .main-navigation {
-	font-family: Montserrat, "Helvetica Neue", sans-serif;
+	font-family: 'helveticaneuecyrmedium', 'helveticaneuecyrmedium', Helvetica, Arial, sans-serif;
 }
 
 .site-footer .main-navigation {
@@ -797,7 +844,7 @@ a:active {
 }
 
 .main-navigation a {
-	color: #1a1a1a;
+	color: #eeeeee;
 	display: block;
 	line-height: 1.3125;
 	outline-offset: -1px;
@@ -806,12 +853,17 @@ a:active {
 
 .main-navigation a:hover,
 .main-navigation a:focus {
-	color: #007acc;
+	color: #ffffff;
 }
 
 .main-navigation .current-menu-item > a,
 .main-navigation .current-menu-ancestor > a {
 	font-weight: 700;
+   /* color: #ff4e3a;*/
+}
+.main-navigation .current-menu-item > a:hover,
+.main-navigation .current-menu-ancestor > a:hover {
+    color: #ffffff;
 }
 
 .main-navigation ul ul {
@@ -1033,7 +1085,7 @@ a:active {
 	border-top: 4px solid #1a1a1a;
 	border-bottom: 4px solid #1a1a1a;
 	clear: both;
-	font-family: Montserrat, "Helvetica Neue", sans-serif;
+	font-family: 'helveticaneuecyrmedium', Helvetica, Arial, sans-serif;
 	margin: 0 7.6923% 3.5em;
 }
 
@@ -1059,7 +1111,7 @@ a:active {
 
 .post-navigation .post-title {
 	display: inline;
-	font-family: Montserrat, "Helvetica Neue", sans-serif;
+	font-family: 'helveticaneuecyrmedium', Helvetica, Arial, sans-serif;
 	font-size: 23px;
 	font-size: 1.4375rem;
 	font-weight: 700;
@@ -1078,7 +1130,7 @@ a:active {
 
 .pagination {
 	border-top: 4px solid #1a1a1a;
-	font-family: Montserrat, "Helvetica Neue", sans-serif;
+	font-family: 'helveticaneuecyrmedium', Helvetica, Arial, sans-serif;
 	font-size: 19px;
 	font-size: 1.1875rem;
 	margin: 0 7.6923% 2.947368421em;
@@ -1217,7 +1269,7 @@ a:active {
 	border-top: 1px solid #d1d1d1;
 	border-bottom: 1px solid #d1d1d1;
 	color: #686868;
-	font-family: Montserrat, "Helvetica Neue", sans-serif;
+	font-family: 'helveticaneuecyrmedium', Helvetica, Arial, sans-serif;
 	font-size: 13px;
 	font-size: 0.8125rem;
 	line-height: 1.6153846154;
@@ -1273,7 +1325,7 @@ a:active {
 	box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.2);
 	color: #21759b;
 	display: block;
-	font-family: Montserrat, "Helvetica Neue", sans-serif;
+	font-family: 'helveticaneuecyrmedium', Helvetica, Arial, sans-serif;
 	font-size: 14px;
 	font-weight: 700;
 	left: -9999em;
@@ -1286,7 +1338,7 @@ a:active {
 
 .logged-in .site .skip-link {
 	box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.2);
-	font-family: "Open Sans", sans-serif;
+	font-family: sans-serif;
 }
 
 .site .skip-link:focus {
@@ -1331,6 +1383,17 @@ blockquote.aligncenter {
 	margin-bottom: 1.473684211em;
 }
 
+.textalign-center{
+    text-align: center;
+}
+
+.textalign-right{
+    text-align: right;
+}
+
+.textalign-justify{
+    text-align: justify;
+}
 
 /**
  * 9.0 - Clearings
@@ -1393,7 +1456,7 @@ blockquote:after,
 }
 
 .widget .widget-title {
-	font-family: Montserrat, "Helvetica Neue", sans-serif;
+	font-family: 'helveticaneuecyrmedium', Helvetica, Arial, sans-serif;
 	font-size: 16px;
 	font-size: 1rem;
 	letter-spacing: 0.046875em;
@@ -1444,7 +1507,7 @@ blockquote:after,
 .widget_recent_entries .post-date {
 	color: #686868;
 	display: block;
-	font-family: Montserrat, "Helvetica Neue", sans-serif;
+	font-family: 'helveticaneuecyrmedium', Helvetica, Arial, sans-serif;
 	font-size: 13px;
 	font-size: 0.8125rem;
 	line-height: 1.615384615;
@@ -1464,7 +1527,7 @@ blockquote:after,
 .widget_rss cite {
 	color: #686868;
 	display: block;
-	font-family: Montserrat, "Helvetica Neue", sans-serif;
+	font-family: 'helveticaneuecyrmedium', Helvetica, Arial, sans-serif;
 	font-size: 13px;
 	font-size: 0.8125rem;
 	font-style: normal;
@@ -1485,7 +1548,7 @@ blockquote:after,
 	border: 1px solid #d1d1d1;
 	border-radius: 2px;
 	display: inline-block;
-	font-family: Montserrat, "Helvetica Neue", sans-serif;
+	font-family: 'helveticaneuecyrmedium', Helvetica, Arial, sans-serif;
 	line-height: 1;
 	margin: 0 0.1875em 0.4375em 0;
 	padding: 0.5625em 0.4375em 0.5em;
@@ -1542,6 +1605,7 @@ blockquote:after,
 
 .site-header {
 	padding: 0;
+    background-color: #393939;
 }
 
 .site-header-main {
@@ -1573,7 +1637,7 @@ blockquote:after,
 }
 
 .site-title {
-	font-family: Montserrat, "Helvetica Neue", sans-serif;
+	font-family: 'helveticaneuecyrmedium', Helvetica, Arial, sans-serif;
 	font-size: 23px;
 	font-size: 1.4375rem;
 	font-weight: 700;
@@ -1582,12 +1646,13 @@ blockquote:after,
 }
 
 .site-branding .site-title a {
-	color: #1a1a1a;
+	color: #ffffff;
+   /* color: #ff4e3a;*/
 }
 
 .site-branding .site-title a:hover,
 .site-branding .site-title a:focus {
-	color: #007acc;
+	color: #ffffff;
 }
 
 .wp-custom-logo .site-title {
@@ -1595,7 +1660,7 @@ blockquote:after,
 }
 
 .site-description {
-	color: #686868;
+	color: #e5e5e5;
 	display: none;
 	font-size: 13px;
 	font-size: 0.8125rem;
@@ -1674,7 +1739,7 @@ blockquote:after,
 }
 
 .entry-title {
-	font-family: Montserrat, "Helvetica Neue", sans-serif;
+	font-family: 'helveticaneuecyrmedium', Helvetica, Arial, sans-serif;
 	font-size: 28px;
 	font-size: 1.75rem;
 	font-weight: 700;
@@ -1959,7 +2024,7 @@ body:not(.search-results) .entry-summary > :last-child,
 
 .entry-footer {
 	color: #686868;
-	font-family: Montserrat, "Helvetica Neue", sans-serif;
+	font-family: 'helveticaneuecyrmedium', Helvetica, Arial, sans-serif;
 	font-size: 13px;
 	font-size: 0.8125rem;
 	line-height: 1.6153846154;
@@ -1995,7 +2060,7 @@ body:not(.search-results) .entry-summary > :last-child,
 .sticky-post {
 	color: #686868;
 	display: block;
-	font-family: Montserrat, "Helvetica Neue", sans-serif;
+	font-family: 'helveticaneuecyrmedium', Helvetica, Arial, sans-serif;
 	font-size: 13px;
 	font-size: 0.8125rem;
 	letter-spacing: 0.076923077em;
@@ -2035,7 +2100,7 @@ body.search-no-results .page-header {
 }
 
 .page-title {
-	font-family: Montserrat, "Helvetica Neue", sans-serif;
+	font-family: 'helveticaneuecyrmedium', Helvetica, Arial, sans-serif;
 	font-size: 23px;
 	font-size: 1.4375rem;
 	line-height: 1.2173913043;
@@ -2058,7 +2123,7 @@ body.search-no-results .page-header {
 
 .page-links {
 	clear: both;
-	font-family: Montserrat, "Helvetica Neue", sans-serif;
+	font-family: 'helveticaneuecyrmedium', Helvetica, Arial, sans-serif;
 	margin: 0 0 1.75em;
 }
 
@@ -2165,7 +2230,7 @@ body.search-no-results .page-header {
 .comments-title,
 .comment-reply-title {
 	border-top: 4px solid #1a1a1a;
-	font-family: Montserrat, "Helvetica Neue", sans-serif;
+	font-family: 'helveticaneuecyrmedium', Helvetica, Arial, sans-serif;
 	font-size: 23px;
 	font-size: 1.4375rem;
 	font-weight: 700;
@@ -2221,7 +2286,7 @@ body.search-no-results .page-header {
 .comment-metadata,
 .pingback .edit-link {
 	color: #686868;
-	font-family: Montserrat, "Helvetica Neue", sans-serif;
+	font-family: 'helveticaneuecyrmedium', Helvetica, Arial, sans-serif;
 	font-size: 13px;
 	font-size: 0.8125rem;
 	line-height: 1.6153846154;
@@ -2271,7 +2336,7 @@ body.search-no-results .page-header {
 	border-radius: 2px;
 	color: #007acc;
 	display: inline-block;
-	font-family: Montserrat, "Helvetica Neue", sans-serif;
+	font-family: 'helveticaneuecyrmedium', Helvetica, Arial, sans-serif;
 	font-size: 13px;
 	font-size: 0.8125rem;
 	line-height: 1;
@@ -2293,7 +2358,7 @@ body.search-no-results .page-header {
 .comment-form label {
 	color: #686868;
 	display: block;
-	font-family: Montserrat, "Helvetica Neue", sans-serif;
+	font-family: 'helveticaneuecyrmedium', Helvetica, Arial, sans-serif;
 	font-size: 13px;
 	font-size: 0.8125rem;
 	letter-spacing: 0.076923077em;
@@ -2319,7 +2384,7 @@ body.search-no-results .page-header {
 
 .no-comments {
 	border-top: 1px solid #d1d1d1;
-	font-family: Montserrat, "Helvetica Neue", sans-serif;
+	font-family: 'helveticaneuecyrmedium', Helvetica, Arial, sans-serif;
 	font-weight: 700;
 	margin: 0;
 	padding-top: 1.75em;
@@ -2629,7 +2694,7 @@ p > video {
 .widecolumn label,
 .widecolumn .mu_register label {
 	color: #686868;
-	font-family: Montserrat, "Helvetica Neue", sans-serif;
+	font-family: 'helveticaneuecyrmedium', Helvetica, Arial, sans-serif;
 	font-size: 13px;
 	font-size: 0.8125rem;
 	font-weight: 400;
@@ -2709,7 +2774,7 @@ p > video {
  */
 
 @media screen and (min-width: 44.375em) {
-	body:not(.custom-background-image):before,
+/*	body:not(.custom-background-image):before,
 	body:not(.custom-background-image):after {
 		background: inherit;
 		content: "";
@@ -2717,7 +2782,7 @@ p > video {
 		left: 0;
 		position: fixed;
 		width: 100%;
-		z-index: 99;
+		z-index: 99; */
 	}
 
 	body:not(.custom-background-image):before {
@@ -2773,7 +2838,7 @@ p > video {
 	}
 
 	.site-header-menu {
-		margin: 1.3125em 0;
+		margin: 0.82em 0;
 	}
 
 	.site-header .main-navigation + .social-navigation {
@@ -2829,6 +2894,7 @@ p > video {
 		font-size: 33px;
 		font-size: 2.0625rem;
 		line-height: 1.2727272727;
+		margin-top: 0.8484848485em;
 		margin-bottom: 0.8484848485em;
 	}
 
@@ -2955,9 +3021,9 @@ p > video {
 
 	.site-header-menu {
 		display: block;
-	/*	-webkit-flex: 0 1 auto;
+		-webkit-flex: 0 1 auto;
 		-ms-flex: 0 1 auto;
-		flex: 0 1 auto; */
+		flex: 0 1 auto;
 	}
 
 	.main-navigation {
@@ -2981,7 +3047,7 @@ p > video {
 
 	.main-navigation li:hover > a,
 	.main-navigation li.focus > a {
-		color: #007acc;
+		color: #ffffff;
 	}
 
 	.main-navigation ul ul {
@@ -3113,8 +3179,8 @@ p > video {
 	}
 
 	.widget {
-		font-size: 13px;
-		font-size: 0.8125rem;
+        /*font-size: 13px;
+        font-size: 0.8125rem;*/
 		line-height: 1.6153846154;
 		margin-bottom: 3.230769231em;
 		padding-top: 1.615384615em;
@@ -3379,8 +3445,8 @@ p > video {
 	.site-branding,
 	.site-header-menu,
 	.header-image {
-		margin-top: 1.75em;
-		margin-bottom: 1.75em;
+		margin-top: 0.85em;
+		margin-bottom: 0.85em;
 	}
 
 	.custom-logo {
@@ -3411,7 +3477,8 @@ p > video {
 		font-size: 40px;
 		font-size: 2.5rem;
 		line-height: 1.225;
-		margin-bottom: 1.05em;
+		margin-top: 1.2em;
+		margin-bottom: 0.7em;
 	}
 
 	.format-aside .entry-title,
@@ -3949,33 +4016,217 @@ p > video {
 	}
 }
 
-/*  custom   theme  ========================================= */
+/*  CUSTOM theme  ========================================= */
+
+/* bg mainmenu #DEE3E7 #cccccc*/
+
+.content-width{
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+.content-outwidth{
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0;
+}
 
 .widget {
-	border-top: 4px solid #eee;
-}	
-	
+    border-top: 4px solid #eee;
+}
 
 body,
 button,
 input,
 select,
 textarea {
-	color: #333333;	
-}	
+    color: #898989;
+    line-height: 1.25;
+}
+
+.float-col2{
+    width:50%;
+    float:left;
+}
+
+.float-col3{
+    width:33.333%;
+    float:left;
+}
+
+.float-col4{
+    width:25%;
+    float:left;
+}
+
+
+/**
+* General classes
+ */
+
+.front-landing .textred{
+    color: #ff402e;
+}
+
+.frontbgdark{
+    color: #ffffff;
+}
+
+.frontbgdark h2{
+    color: #ffffff;
+}
+.frontbgdark h3{
+    color: #ff402e;
+}
+
+.opacityred{
+   background-image: url(http://localhost/wp45/wp-content/uploads/2016/07/opacityred2-1.png);
+   color: #fff;
+}
+
+.opacityblack{
+    background-image: url(http://localhost/wp45/wp-content/uploads/2016/07/opacityblack2.png);
+    color: #fff;
+}
+
+.opacityblack.hover-red:hover{
+    background-image: url(http://localhost/wp45/wp-content/uploads/2016/07/opacityred2-1.png);
+}
+
+
+/**
+* Front Page
+ */
+
+.front-landing h2{
+    /*  font-size: 29px;*/
+    font-weight: 700;
+    letter-spacing: 2px;
+    padding: 50px 0 35px;
+}
+
+.front-landing h3{
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    line-height: 60px;
+    /* margin: 21px 0 14px;*/
+}
+
+
+/**
+ *  - Front Page Sections
+ */
+
+
+/*  Slider - Header Front Page (Landing) */
+    /*plugin [Slider Ultimate 1.0.1]*/
+
+.ewd-slider-section li.ewd-slide{
+    padding: 0!important;
+}
+
+.ewd-slider-section .ewd-slider-control-thumbnail {
+    margin-bottom: 0px!important;
+}
+
+.ewd-slider-section .ewd-slider-control {
+    margin-top: 0px!important;
+}
+
+.ewd-slider-thumbnails {
+    bottom: 25px!important;
+}
+
+.slider .ewd-slide .slideText .slideTitle {
+    color: #fff;
+    float: left;
+    font-family: "helveticaneuecyrbold", Helvetica, Arial, sans-serif!important;
+    letter-spacing: 4px;
+    line-height: 1;
+    width: 100%;
+}
+
+
+/* Section Welcome */	
 	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+.frontwelcome{
+    padding-top: 0;
+    padding-bottom: 33px;
+}
+
+.frontwelcome .welcome-list{
+    padding-top: 40px;
+    padding-bottom: 32px;
+}
+
+.welcome-list figure div{
+    height: 90px;
+    width: 90px;
+    margin: 0 auto;
+    border-radius: 45px;
+    background-color: #e84c3d;
+    background-color: #ff402e;
+}
+
+
+/* Section Story */
+
+.story{
+    background: url('http://localhost/wp45/wp-content/uploads/2016/07/frontstory.jpg') no-repeat center center;
+}
+
+.frontstory .opacityblack{
+    width: 100%;
+}
+
+.content-outwidth.frontbglayer{
+    height: 370px;
+
+    background:url(http://localhost/wp45/wp-content/uploads/2016/08/dev1.png) no-repeat  right center;
+}
+.frontstory-content{
+    float: left;
+    width: 50%;
+}
+
+
+/* Section Restaurant-Menu */
+
+.frontmenu{
+    background-color: #333344;
+    color: #fff;
+}
+
+.frontmenu-content{
+    background-color: #1c1c1c;
+    color: #ff402e;
+}
+
+.frontmenu-row{
+    display: -webkit-flex; /* Safari */
+    display: flex;
+    -webkit-flex-direction: row; /* Safari */
+    flex-direction: row;
+    -webkit-flex-wrap: nowrap; /* Safari */
+    flex-wrap: nowrap;
+}
+
+.frontmenu-text{
+    position: absolute;
+    display: none;
+}
+
+.frontmenu-text:hover{
+    display: block;
+    background-image: url(http://localhost/wp45/wp-content/uploads/2016/07/opacityred2-1.png);
+    color: #fff;
+}
+
+.frontmenu-item {
+    position: relative;
+}
+
+
+
+

@@ -9,7 +9,7 @@
 
 get_header(); ?>
 
-<div id="primary" class="">
+<div id="primary" class="front-content">
 	<main id="main" class="site-main front-landing" role="main">
 	
 		<?php
@@ -32,12 +32,12 @@ get_header(); ?>
 		// Include the page content template.
 		get_template_part( 'template-parts/content', 'frontnews' );
 
-		
-		// Start the loop.
-		while ( have_posts() ) : the_post();
-			//  Content output of this page
-		// End of the loop.
-		endwhile;
+
+        // Start the loop.
+        while ( have_posts() ) : the_post();
+            //  Content output of this page
+            // End of the loop.
+        endwhile;
 
 		
         // Include the page content template.
@@ -47,11 +47,11 @@ get_header(); ?>
         get_template_part( 'template-parts/content', 'frontmap' );
 
         ?>
-    </main><!-- .site-main -->
+    </main><!-- main -->
 
 	<?php // get_sidebar( 'content-bottom' ); ?>
 
-</div><!-- .content-area -->
+</div><!-- .front-content -->
 
 <?php // get_sidebar(); ?>
 <?php get_footer(); ?>

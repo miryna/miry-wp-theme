@@ -1,6 +1,6 @@
 <?php
 /**
- *  The template is used to display the section Story on the Front page
+ * The template used for section of front page content
  *
  * @package WordPress
  * @subpackage miry
@@ -8,26 +8,27 @@
  */
 ?>
 
-<section id="frontstory" class="frontstory" style="background: url('http://localhost/wp45/wp-content/uploads/2016/07/frontstory.jpg') no-repeat center center;">
-    <div class="opacityblack" style="height: 400px;width: 100%;">
-        <div class="content-width">
+<section id="frontstory" class="frontstory frontbgdark" style="">
+    <div class="opacityblack" style="">
+        <div class="content-outwidth frontbglayer">
+         <div class="content-width">
 
-			<header class="entry-header textalign-center">
-				<h3>НАША СПЕЦИАЛИЗАЦИЯ</h3>
-			</header>
 
-			<div class="frontstory-main" style="width: 50%;">
-			
-				<!--   Example of content -->
-				<p>
-					Такой текст также называется как заполнитель.
-					Это очень удобный инструмент для моделей (макетов).
-					Он помогает выделить визуальные элементы в документе или презентации, например текст, шрифт или разметка.
-					Такой текст также называется как заполнитель.
-				</p>
-				
-			</div><!-- .frontstory-main -->
+                    <div class="frontstory-content" style="">
+                        <header class="textalign-center">
+                            <h3>НАША СПЕЦИАЛИЗАЦИЯ</h3>
+                        </header><!--  -->
 
-        </div><!-- .content-width -->
+                        <p>Такой текст также называется как заполнитель.
+                        Это очень удобный инструмент для моделей (макетов).
+                        Он помогает выделить визуальные элементы в документе или презентации, например текст, шрифт или разметка.
+                        Такой текст также называется как заполнитель.
+                        </p>
+                    </div><!--  -->
+
+
+
+         </div><!-- .content-width -->
+        </div><!-- .content-outwidth -->
     </div><!-- .opacityblack -->
-</section><!-- .frontstory -->
+</section><!-- .section frontstory -->
