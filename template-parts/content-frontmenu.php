@@ -10,10 +10,15 @@
 
 <section id="frontmenu" class="frontmenu frontbgdark">
 
-    <header class="entry-header textalign-center">
-        <h2>МЕНЮ</h2>
+    <div class="header-container">
+        <header class="entry-header textalign-center">
+            <h2>МЕНЮ
+                <div class="pic-darkbg"></div>
+            </h2>
+        </header>
+
         <nav class="">СУПЫ    МЯСНЫЕ БЛЮДА   САЛАТЫ   РЫБНЫЕ БЛЮДА</nav>
-    </header>
+        </div>
 
     <div class="frontmenu-content textalign-center">
 
@@ -58,6 +63,7 @@
         </div> -->
 
 	    <?php echo do_shortcode("[wpb-latest-product title='Latest Product']"); ?>
+	    <?php echo do_shortcode('[wpb-feature-product title="Feature Products"]'); ?>
 
 
     </div> <!--.frontmenu-content -->

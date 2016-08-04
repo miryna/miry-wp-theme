@@ -4072,10 +4072,10 @@ textarea {
     color: #ffffff;
 }
 
-.frontbgdark h2{
+.front-landing .frontbgdark h2{
     color: #ffffff;
 }
-.frontbgdark h3{
+.front-landing .frontbgdark h3{
     color: #ff402e;
 }
 
@@ -4100,15 +4100,17 @@ textarea {
 
 .front-landing h2{
     /*  font-size: 29px;*/
-    font-weight: 700;
+    color: #1c1c1c;
+    font-weight: normal;
     letter-spacing: 2px;
     padding: 50px 0 35px;
 }
 
 .front-landing h3{
+    color: #1c1c1c;
     font-size: 13px;
-    font-weight: 700;
-    letter-spacing: 1px;
+    font-weight: normal;
+    letter-spacing: 1.5px;
     line-height: 60px;
     /* margin: 21px 0 14px;*/
 }
@@ -4157,7 +4159,7 @@ textarea {
 
 .frontwelcome .welcome-list{
     padding-top: 40px;
-    padding-bottom: 32px;
+    padding-bottom: 7px;
 }
 
 .welcome-list figure div{
@@ -4167,13 +4169,15 @@ textarea {
     border-radius: 45px;
     background-color: #e84c3d;
     background-color: #ff402e;
+    background-color: #1c1c1c;
 }
 
 
 /* Section Story */
 
-.story{
-    background: url('http://localhost/wp45/wp-content/uploads/2016/07/frontstory.jpg') no-repeat center center;
+.frontstory{
+    background: url('http://localhost/wp45/wp-content/uploads/2016/07/frontstory.jpg') no-repeat left center;
+   /* background: url('http://localhost/wp45/wp-content/uploads/2016/08/bgstory.jpg') no-repeat center center;*/
 }
 
 .frontstory .opacityblack{
@@ -4181,21 +4185,47 @@ textarea {
 }
 
 .content-outwidth.frontbglayer{
-    height: 370px;
-
-    background:url(http://localhost/wp45/wp-content/uploads/2016/08/dev1.png) no-repeat  right center;
+    height: 333px;
+    background:url(http://localhost/wp45/wp-content/uploads/2016/08/coock.png) no-repeat  top right;
 }
+
 .frontstory-content{
     float: left;
     width: 50%;
 }
 
+.frontstory.frontbgdark header{
+   padding-top: 50px;
+    padding-bottom: 11px;
+}
 
 /* Section Restaurant-Menu */
 
 .frontmenu{
     background-color: #333344;
     color: #fff;
+}
+
+.frontmenu header h2{
+    position: relative;
+}
+.frontmenu .pic-darkbg{
+    position: absolute;
+}
+
+.frontmenu .pic-darkbg::after {
+    background: rgba(0, 0, 0, 0) url(http://localhost/wp45/wp-content/uploads/2016/08/pin.png) no-repeat scroll center center;
+    content: "";
+    height: 7px;
+    left: 50%;
+    margin-left: -40px;
+    position: absolute;
+    top: 50px;
+    width: 126px;
+}
+
+.frontmenu .pic-darkbg{
+    border-top: 1px dotted #bbbbbb;  /*126px*/
 }
 
 .frontmenu-content{
@@ -4227,6 +4257,36 @@ textarea {
     position: relative;
 }
 
+/*slider plugin [WPB WooCommerce Product slider 1.0.7]*/
 
+.wpb_slider_area.wpb_fix_cart .item {
+    margin: 1px;
+}
 
+.owl-theme .owl-controls .owl-buttons div {
 
+    font-size: 86px;
+}
+
+.wpb_slider_area .owl-theme .owl-controls .owl-buttons > div {
+   /* background: none;*/
+    background: #869791 none repeat scroll 0 0;
+}
+
+.grid figcaption {
+    background: rgba(255, 64, 46, 0.77); none repeat scroll 0 0; /*#ff402e*/
+}
+
+.grid figcaption a:hover, div.grid_no_animation figcaption a.button:hover {
+    background: transparent none repeat scroll 0 0 !important;
+}
+
+.grid figcaption a.button {
+    color: #fff !important;
+    text-decoration: underline;
+    text-transform: uppercase;
+}
+
+.grid figcaption a, div.grid_no_animation figcaption a.button {
+    background: transparent none repeat scroll 0 0 !important;
+}

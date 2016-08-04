@@ -8,7 +8,7 @@
  */
 ?>
 
-<section id="frontwelcome" class="textalign-center">
+<section id="frontwelcome" class="frontwelcome textalign-center">
 
 	<header class="">
         <h1 class="entry-title">Приглашаем в <span class="textred">Our Clouds!</span></h1>
@@ -59,9 +59,9 @@
                 </figcaption>
             </figure>
         </div><!-- .col4 -->
-
+        <div  class="clear"></div>
     </div><!--  -->
 
-    <div  class="clear"></div>
+
     </div><!-- .content-width -->
 </section><!--  -->
