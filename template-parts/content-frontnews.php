@@ -11,10 +11,11 @@
 <section id="frontnews" class="frontnews frontbgdark" style="background-color: #334; color: #fff;">
 
 
-    <header class="entry-header textalign-center">
-        <?php /* the_title( '<h2 class="">', '</h2>' ); */ ?>
+    <header class="entry-header textalign-center with-pic-separator">
         <h2>НОВОСТИ</h2>
-    </header><!--  -->
+        <span class="pic-separator pic-darkbg"></spsn>
+    </header>
+
 
     <div class="">
 

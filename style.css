@@ -1780,6 +1780,7 @@ a.post-thumbnail:focus {
 }
 
 .entry-content h1,
+.entry-header h1,
 .entry-summary h1,
 .comment-content h1,
 .textwidget h1 {
@@ -1791,6 +1792,7 @@ a.post-thumbnail:focus {
 }
 
 .entry-content h2,
+.entry-header h2,
 .entry-summary h2,
 .comment-content h2,
 .textwidget h2 {
@@ -1802,6 +1804,7 @@ a.post-thumbnail:focus {
 }
 
 .entry-content h3,
+.entry-header h3,
 .entry-summary h3,
 .comment-content h3,
 .textwidget h3 {
@@ -1813,6 +1816,7 @@ a.post-thumbnail:focus {
 }
 
 .entry-content h4,
+.entry-header h4,
 .entry-content h5,
 .entry-content h6,
 .entry-summary h4,
@@ -1832,6 +1836,7 @@ a.post-thumbnail:focus {
 }
 
 .entry-content h4,
+.entry-header h4,
 .entry-summary h4,
 .comment-content h4,
 .textwidget h4 {
@@ -1852,6 +1857,12 @@ a.post-thumbnail:focus {
 .entry-content h4,
 .entry-content h5,
 .entry-content h6,
+.entry-header h1,
+.entry-header h2,
+.entry-header h3,
+.entry-header h4,
+.entry-header h5,
+.entry-header h6,
 .entry-summary h1,
 .entry-summary h2,
 .entry-summary h3,
@@ -3501,6 +3512,7 @@ p > video {
 	}
 
 	.entry-content h1,
+	.entry-header h1,
 	.entry-summary h1,
 	.comment-content h1 {
 		font-size: 33px;
@@ -3511,6 +3523,7 @@ p > video {
 	}
 
 	.entry-content h2,
+	.entry-header h2,
 	.entry-summary h2,
 	.comment-content h2 {
 		font-size: 28px;
@@ -3521,6 +3534,7 @@ p > video {
 	}
 
 	.entry-content h3,
+	.entry-header h3,
 	.entry-summary h3,
 	.comment-content h3 {
 		font-size: 23px;
@@ -3531,6 +3545,7 @@ p > video {
 	}
 
 	.entry-content h4,
+	.entry-header h4,
 	.entry-summary h4,
 	.entry-intro h4,
 	.comment-content h4 {
@@ -3540,6 +3555,9 @@ p > video {
 	.entry-content h4,
 	.entry-content h5,
 	.entry-content h6,
+	.entry-header h4,
+	.entry-header h5,
+	.entry-header h6,
 	.entry-summary h4,
 	.entry-summary h5,
 	.entry-summary h6,
@@ -3829,6 +3847,7 @@ p > video {
 	.page-title,
 	.comments-title,
 	.entry-content h2,
+	.entry-header h2,
 	.entry-summary h2,
 	.comment-content h2,
 	.widecolumn h2 {
@@ -4025,11 +4044,6 @@ p > video {
     margin: 0 auto;
     padding: 0 20px;
 }
-.content-outwidth{
-    max-width: 1400px;
-    margin: 0 auto;
-    padding: 0;
-}
 
 .widget {
     border-top: 4px solid #eee;
@@ -4059,24 +4073,23 @@ textarea {
     float:left;
 }
 
+header h1 {
+    display: block;
+}
+header h2 {
+    display: block;
+}
 
 /**
 * General classes
  */
 
-.front-landing .textred{
+.textred{
     color: #ff402e;
 }
 
 .frontbgdark{
     color: #ffffff;
-}
-
-.front-landing .frontbgdark h2{
-    color: #ffffff;
-}
-.front-landing .frontbgdark h3{
-    color: #ff402e;
 }
 
 .opacityred{
@@ -4095,18 +4108,21 @@ textarea {
 
 
 /**
-* Front Page
+* Front Page  .front-landing
  */
 
-.front-landing h2{
-    /*  font-size: 29px;*/
+.whith-pic-separator h2{
+    margin: 47px 0 16px;
+}
+
+h2{
     color: #1c1c1c;
     font-weight: normal;
     letter-spacing: 2px;
-    padding: 50px 0 35px;
+    margin: 47px 0 16px;
 }
 
-.front-landing h3{
+ h3{
     color: #1c1c1c;
     font-size: 13px;
     font-weight: normal;
@@ -4115,6 +4131,40 @@ textarea {
     /* margin: 21px 0 14px;*/
 }
 
+.frontbgdark h2{
+    color: #ffffff;
+}
+ .frontbgdark h3{
+    color: #ff402e;
+}
+ .front-landing section header{
+    border-top: 1px solid transparent;
+ }
+
+header.with-pic-separator{
+    margin-bottom: 35px;
+}
+
+header.with-pic-separator .pic-separator {
+    background: rgba(0, 0, 0, 0) url(http://localhost/wp45/wp-content/uploads/2016/08/pin2.png) no-repeat scroll center center;
+    height: 7px;
+    width: 47px;
+}
+
+.frontbgdark header.with-pic-separator .pic-separator {
+    background: rgba(0, 0, 0, 0) url(http://localhost/wp45/wp-content/uploads/2016/08/pin.png) no-repeat scroll center center;
+}
+
+header.with-pic-separator .pic-separator::after{
+    content: "";
+    display: inline-block;
+    height: 1px;
+    width: 126px;
+    margin: 0 0 20px;
+    border-top: 1px dotted #bbbbbb;  /*126px*/
+    position: relative;
+    top: 16px;
+}
 
 /**
  *  - Front Page Sections
@@ -4150,7 +4200,7 @@ textarea {
 }
 
 
-/* Section Welcome */	
+/* Section Frontwelcome */
 	
 .frontwelcome{
     padding-top: 0;
@@ -4173,7 +4223,7 @@ textarea {
 }
 
 
-/* Section Story */
+/* Section Fromtstory */
 
 .frontstory{
     background: url('http://localhost/wp45/wp-content/uploads/2016/07/frontstory.jpg') no-repeat left center;
@@ -4184,7 +4234,7 @@ textarea {
     width: 100%;
 }
 
-.content-outwidth.frontbglayer{
+.section-inner.frontbglayer{
     height: 333px;
     background:url(http://localhost/wp45/wp-content/uploads/2016/08/coock.png) no-repeat  top right;
 }
@@ -4206,26 +4256,16 @@ textarea {
     color: #fff;
 }
 
-.frontmenu header h2{
-    position: relative;
-}
-.frontmenu .pic-darkbg{
-    position: absolute;
+.frontmenu-header-container{
+    padding-bottom: 17px;
 }
 
-.frontmenu .pic-darkbg::after {
-    background: rgba(0, 0, 0, 0) url(http://localhost/wp45/wp-content/uploads/2016/08/pin.png) no-repeat scroll center center;
-    content: "";
-    height: 7px;
-    left: 50%;
-    margin-left: -40px;
-    position: absolute;
-    top: 50px;
-    width: 126px;
+.frontmenu header{
+    margin-bottom: 23px;
 }
 
-.frontmenu .pic-darkbg{
-    border-top: 1px dotted #bbbbbb;  /*126px*/
+.frontmenu nav{
+    padding: 20px 0 25px 0;
 }
 
 .frontmenu-content{
@@ -4256,6 +4296,26 @@ textarea {
 .frontmenu-item {
     position: relative;
 }
+
+
+/* Section Frontreservations */
+
+.frontreservations{
+    width: 100%;
+    background: url('http://localhost/wp45/wp-content/uploads/2016/07/frontstory.jpg') no-repeat center center;
+}
+
+
+
+/* Section Frontnews */
+
+
+
+
+/* Section Frontcontacts */
+
+
+
 
 /*slider plugin [WPB WooCommerce Product slider 1.0.7]*/
 

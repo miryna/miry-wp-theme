@@ -10,7 +10,7 @@
 
 <section id="frontstory" class="frontstory frontbgdark" style="">
     <div class="opacityblack" style="">
-        <div class="content-outwidth frontbglayer">
+        <div class="section-inner frontbglayer">
          <div class="content-width">
 
 

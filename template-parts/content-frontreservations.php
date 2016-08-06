@@ -8,14 +8,15 @@
  */
 ?>
 
-<section id="frontreservations" class="frontreservations frontbgdark" style="width: 100%; background: url('http://localhost/wp45/wp-content/uploads/2016/07/frontstory.jpg') no-repeat center center;" >
+<section id="frontreservations" class="frontreservations textalign-center frontbgdark">
     <div class="opacityblack">
         <div class="content-width">
 
-        <header class="entry-header textalign-center">
-            <?php/* the_title( '<h2 class="">', '</h2>' ); */ ?>
-            <h2>ЗАКАЗ СТОЛИКОВ</h2>
-        </header><!--  -->
+            <header class="entry-header  with-pic-separator">
+                <h2>ЗАКАЗ СТОЛИКОВ</h2>
+                <span class="pic-separator pic-darkbg"></spsn>
+            </header>
+
                     <!--
                     <div class="">
                         <form action="" >

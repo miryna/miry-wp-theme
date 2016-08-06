@@ -11,10 +11,10 @@
 <section id="frontcontacts" class="frontcontacts frontbgdark" style=" background-color: #ff402e; color: #fff;">
     <div class="content-width">
 
-    <header class="entry-header textalign-center">
-        <?php /* the_title( '<h2 class="">', '</h2>' ); */ ?>
+    <header class="entry-header textalign-center with-pic-separator">
         <h2>КОНТАКТЫ</h2>
-    </header><!--  -->
+        <span class="pic-separator pic-colorbg"></spsn>
+    </header>
 
     <div class="">
         <div class="col4"  style="width:25%; float: left;"  >

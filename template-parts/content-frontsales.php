@@ -8,12 +8,12 @@
  */
 ?>
 
-<section id="frontsales" class="">
+<section id="frontsales" class="frontsales">
 
-    <header class="entry-header textalign-center">
-        <?php/* the_title( '<h2 class="">', '</h2>' ); */ ?>
+    <header class="entry-header textalign-center with-pic-separator">
         <h2>АКЦИИ</h2>
-    </header><!--  -->
+        <span class="pic-separator pic-darkbg"></spsn>
+    </header>
 
     <div class="content-width">
         <div class="col2"  style="width:50%; float: left;">

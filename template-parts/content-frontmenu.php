@@ -10,11 +10,10 @@
 
 <section id="frontmenu" class="frontmenu frontbgdark">
 
-    <div class="header-container">
-        <header class="entry-header textalign-center">
-            <h2>МЕНЮ
-                <div class="pic-darkbg"></div>
-            </h2>
+    <div class="frontmenu-header-container textalign-center">
+        <header class="entry-header with-pic-separator">
+            <h2>МЕНЮ</h2>
+            <span class="pic-separator"></spsn>
         </header>
 
         <nav class="">СУПЫ    МЯСНЫЕ БЛЮДА   САЛАТЫ   РЫБНЫЕ БЛЮДА</nav>
