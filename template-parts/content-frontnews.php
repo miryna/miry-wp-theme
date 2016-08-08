@@ -13,7 +13,7 @@
 
     <header class="entry-header textalign-center with-pic-separator">
         <h2>НОВОСТИ</h2>
-        <span class="pic-separator pic-darkbg"></spsn>
+        <span class="pic-separator pic-darkbg"></span>
     </header>
 
 

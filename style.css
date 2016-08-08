@@ -2793,8 +2793,8 @@ p > video {
 		left: 0;
 		position: fixed;
 		width: 100%;
-		z-index: 99; */
-	}
+		z-index: 99;
+	} */
 
 	body:not(.custom-background-image):before {
 		top: 0;
@@ -4213,21 +4213,70 @@ header.with-pic-separator .pic-separator::after{
 }
 
 .welcome-list figure div{
-    height: 90px;
-    width: 90px;
+    height: 88px;
+    width: 88px;
     margin: 0 auto;
-    border-radius: 45px;
-    background-color: #e84c3d;
+    border-radius: 44px;
+  /*  background-color: #e84c3d;
+    background-color: #ff402e;*/
+    background-color: #cccccc;
+}
+.welcome-list figure div:hover{
     background-color: #ff402e;
-    background-color: #1c1c1c;
+    background-color: #F2311F;
+}
+
+.welcome-list figure i.g-icon{
+    display: inline-block;
+    position: relative;
+    top: 18px;
+    vertical-align: middle;
+    height: 54px;
+    width: 54px;
+    border-radius: 27px;
+    background-color: #ff402e;
+    -webkit-box-shadow: inset 0 1px 2px #dd0000;
+    -moz-box-shadow: inset 0 1px 2px #dd0000;
+    box-shadow: inset 0 1px 2px #dd0000;
+}
+
+.welcome-list figure i.g-icon:hover{
+    background-color: #FC9494;
+    background-color: #bbbbbb;
+    -webkit-box-shadow: inset 0 1px 2px #dd0000;
+    -moz-box-shadow: inset 0 1px 2px #dd0000;
+    box-shadow: inset 0 1px 2px #dd0000;
+}
+
+.welcome-list figure i.g-icon:before {
+    position: relative;
+    top: 13px;
+    display: inline-block;
+    -webkit-font-smoothing: antialiased;
+    font: normal 32px/1 'Genericons';
+    vertical-align: middle;
+    color: #ffffff;
+}
+
+.welcome-list figure .g-icon-1d:before {
+    content: '\f108';
+}
+.welcome-list figure .g-icon-1b:before {
+    content: '\f461';
+}
+.welcome-list figure .g-icon-1c:before {
+    content: '\f225';
+}
+.welcome-list figure .g-icon-1a:before {
+    content: '\f468';
 }
 
 
-/* Section Fromtstory */
+/* Section Frontstory */
 
 .frontstory{
-    background: url('http://localhost/wp45/wp-content/uploads/2016/07/frontstory.jpg') no-repeat left center;
-   /* background: url('http://localhost/wp45/wp-content/uploads/2016/08/bgstory.jpg') no-repeat center center;*/
+  /*  background: url('http://localhost/wp45/wp-content/uploads/2016/07/frontstory.jpg') no-repeat left center;*/
+    background: url('http://localhost/wp45/wp-content/uploads/2016/08/bgstory2.jpg') no-repeat center center;
 }
 
 .frontstory .opacityblack{
@@ -4298,21 +4347,132 @@ header.with-pic-separator .pic-separator::after{
 }
 
 
+/* Section Frontsales */
+
+.frontsales{
+    margin-top: -20px;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+
+
 /* Section Frontreservations */
 
 .frontreservations{
     width: 100%;
-    background: url('http://localhost/wp45/wp-content/uploads/2016/07/frontstory.jpg') no-repeat center center;
+   /* background: url('http://localhost/wp45/wp-content/uploads/2016/07/frontstory.jpg') no-repeat center center;*/
+    background: url('http://localhost/wp45/wp-content/uploads/2016/08/features_bg.jpg') top left;
+    background: url('http://localhost/wp45/wp-content/uploads/2016/08/bg_reserv.jpg') top left;
+}
+.frontreservations .content-width{
+    padding-bottom: 38px;
 }
 
 
+/* plugin [ReDi Restaurant Reservation v. 15.0422 ] */
+
+/**
+ * 14.5 -  >= 710px
+ */
+
+@media screen and (min-width: 44.375em)  {
+
+    #redi-reservation #step1 h2{
+        margin-top: 10px;
+    }
+
+}
+
+#redi-reservation .cancel-reservation{
+    margin-right: 50px;
+    font-weight: 1.2em;
+}
+
+.redi-form-item{
+    display: inline-block;
+    vertical-align: bottom;
+}
+#redi-reservation .rowLeft, #redi-reservation .rowRight {
+    display: block!important;
+    width: 100%!important;
+}
+
+select.redi-reservation-select{
+    padding-top: 13px;
+}
+
+.redi-restaurant-user-data{
+    max-width: 300px;
+}
 
 /* Section Frontnews */
 
 
 
 
+
 /* Section Frontcontacts */
+
+.frontcontacts{
+    background-color: #ff402e;
+    color: #fff;
+    padding-bottom: 60px;
+}
+
+.contacts-list figure h3{
+    color: #ffffff;
+}
+
+.contacts-list figure div{
+    height: 88px;
+    width: 88px;
+    margin: 0 auto;
+    border-radius: 44px;
+    background-color: #ffffff;
+}
+
+.contacts-list figure div:hover{
+    background-color: #eeeeee;
+}
+
+.contacts-list figure i.g-icon{
+    display: inline-block;
+    position: relative;
+    top: 18px;
+    vertical-align: middle;
+    height: 54px;
+    width: 54px;
+    border-radius: 27px;
+    background-color: #f4f4ec;
+    -webkit-box-shadow: inset 0 1px 2px #cccccc;
+    -moz-box-shadow: inset 0 1px 2px #cccccc;
+    box-shadow: inset 0 1px 2px #cccccc;
+}
+
+.contacts-list figure i.g-icon:before {
+    position: relative;
+    top: 13px;
+    display: inline-block;
+    -webkit-font-smoothing: antialiased;
+    font: normal 32px/1 'Genericons';
+    vertical-align: middle;
+    background-color: f4f4ec;
+    color: #ff402e;
+}
+
+.contacts-list figure .g-icon-2a:before {
+    content: '\f303';
+}
+.contacts-list figure .g-icon-2b:before {
+    content: '\f417';
+}
+.contacts-list figure .g-icon-2c:before {
+    content: '\f50c';
+}
+.contacts-list figure .g-icon-2d:before {
+    content: '\f410';
+}
 
 
 
@@ -4334,7 +4494,7 @@ header.with-pic-separator .pic-separator::after{
 }
 
 .grid figcaption {
-    background: rgba(255, 64, 46, 0.77); none repeat scroll 0 0; /*#ff402e*/
+    background: rgba(255, 64, 46, 0.77) non-repeat  scroll 0 0; /*#ff402e*/
 }
 
 .grid figcaption a:hover, div.grid_no_animation figcaption a.button:hover {

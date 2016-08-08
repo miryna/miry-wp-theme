@@ -22,7 +22,9 @@
     <div class="welcome-list">
         <div class="float-col4">
             <figure>
-                <div style=""></div>
+                <div>
+                    <i class="g-icon g-icon-1a"></i>
+                </div>
                 <figcaption>
                     <h3>НАШИ ТЕЛЕФОНЫ</h3>
                     <p>Lorem ipsum – псевдо-латинский текст, который используется</p>
@@ -32,7 +34,9 @@
 
         <div class="float-col4">
             <figure>
-                <div style=""></div>
+                <div>
+                    <i class="g-icon g-icon-1b"></i>
+                </div>
                 <figcaption>
                     <h3>НАШИ ТЕЛЕФОНЫ</h3>
                     <p>Для веб дизайна, типографии, оборудования, и распечатки</p>
@@ -42,7 +46,9 @@
 
         <div class="float-col4">
             <figure>
-                <div style=""></div>
+                <div>
+                    <i class="g-icon g-icon-1c"></i>
+                </div>
                 <figcaption>
                     <h3>ПРАЗДНИКИ У НАС</h3>
                     <p>Lorem ipsum – псевдо-латинский текст, который используется</p>
@@ -52,7 +58,9 @@
 
         <div class="float-col4">
             <figure>
-                <div style=""></div>
+                <div>
+                    <i class="g-icon g-icon-1d"></i>
+                </div>
                 <figcaption>
                     <h3>НАШИ ТЕЛЕФОНЫ</h3>
                     <p>Для веб дизайна, типографии, оборудования, и распечатки</p>

@@ -8,13 +8,13 @@
  */
 ?>
 
-<section id="frontreservations" class="frontreservations textalign-center frontbgdark">
+<section id="frontreservations" class="frontreservations frontbgdark">
     <div class="opacityblack">
         <div class="content-width">
 
-            <header class="entry-header  with-pic-separator">
+            <header class="entry-header  with-pic-separator textalign-center ">
                 <h2>ЗАКАЗ СТОЛИКОВ</h2>
-                <span class="pic-separator pic-darkbg"></spsn>
+                <span class="pic-separator pic-darkbg"></span>
             </header>
 
                     <!--

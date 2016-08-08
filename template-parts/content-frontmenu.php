@@ -13,7 +13,7 @@
     <div class="frontmenu-header-container textalign-center">
         <header class="entry-header with-pic-separator">
             <h2>МЕНЮ</h2>
-            <span class="pic-separator"></spsn>
+            <span class="pic-separator"></span>
         </header>
 
         <nav class="">СУПЫ    МЯСНЫЕ БЛЮДА   САЛАТЫ   РЫБНЫЕ БЛЮДА</nav>

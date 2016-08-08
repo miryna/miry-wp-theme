@@ -12,21 +12,16 @@
 
     <header class="entry-header textalign-center with-pic-separator">
         <h2>АКЦИИ</h2>
-        <span class="pic-separator pic-darkbg"></spsn>
+        <span class="pic-separator pic-darkbg"></span>
     </header>
 
     <div class="content-width">
-        <div class="col2"  style="width:50%; float: left;">
-            <h3>SALE 1</h3>
-            image
-            Lorem ipsum – псевдо-латинский текст, который используется для веб дизайна, типографии, оборудования, и распечатки
-        </div><!-- .col2 -->
-        <div class="col2"  style="width:50%; float: left;">
-            <h3>SALE 2</h3>
-            image
-            Lorem ipsum – псевдо-латинский текст, который используется для веб дизайна, типографии, оборудования, и распечатки
-        </div><!-- .col2 -->
+        <p>
+        Lorem ipsum – псевдо-латинский текст, который используется для веб дизайна, типографии, оборудования, и распечатки вместо английского текста для того, чтобы сделать ударение не на содержание, а на элементы дизайна.
+        </p>
+
+        <img src="http://localhost/wp45/wp-content/uploads/2016/08/restaurant_flyer2.jpg" alt="Каждый 3-й завтрак - салат в подарок!">
 	</div><!--  -->
 
-    <div  class="clear" style="clear:both;"></div>
+    <div  class="clear"></div>
 </section><!-- .frontsales -->
