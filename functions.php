@@ -283,7 +283,12 @@ function miry_scripts() {
 	wp_localize_script( 'miry-script', 'screenReaderText', array(
 		'expand'   => __( 'expand child menu', 'miry' ),
 		'collapse' => __( 'collapse child menu', 'miry' ),
-	) );
+	));
+
+    // Load the jquery-accordion script for front page.
+    if ( is_front_page()) {
+        wp_enqueue_script( 'jquery.accordion.2.0.min', get_template_directory_uri() . '/js/jquery.accordion.2.0.min.js', array( 'jquery' ), '20160412' );
+    }
 }
 add_action( 'wp_enqueue_scripts', 'miry_scripts' );
 

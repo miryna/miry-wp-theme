@@ -9,7 +9,7 @@
 ?>
 
 <section id="frontreservations" class="frontreservations frontbgdark">
-    <div class="opacityblack">
+    <div> <!-- class="opacityblack" -->
         <div class="content-width">
 
             <header class="entry-header  with-pic-separator textalign-center ">

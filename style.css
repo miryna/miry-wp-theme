@@ -1605,7 +1605,7 @@ blockquote:after,
 
 .site-header {
 	padding: 0;
-    background-color: #393939;
+    background-color: #303030;
 }
 
 .site-header-main {
@@ -4058,6 +4058,10 @@ textarea {
     line-height: 1.25;
 }
 
+.inline-block{
+    display: inline-block;
+}
+
 .float-col2{
     width:50%;
     float:left;
@@ -4137,6 +4141,12 @@ h2{
  .frontbgdark h3{
     color: #ff402e;
 }
+
+.frontbgdark p:hover{
+    color: #ccc;
+}
+
+
  .front-landing section header{
     border-top: 1px solid transparent;
  }
@@ -4217,35 +4227,50 @@ header.with-pic-separator .pic-separator::after{
     width: 88px;
     margin: 0 auto;
     border-radius: 44px;
-  /*  background-color: #e84c3d;
-    background-color: #ff402e;*/
-    background-color: #cccccc;
+     background-color: #1c1c1c;  /*#ff402e; #e32201; #ccc;*/
 }
+/*
+.welcome-list figure div.g-icon-1a {
+    background-color: #009966;
+}
+
+.welcome-list figure div.g-icon-1b {
+    background-color: #85b140;
+}
+
+.welcome-list figure div.g-icon-1c {
+    background-color: #BC214D;
+}
+
+.welcome-list figure div.g-icon-1d {
+    background-color: #55557F;
+}
+*/
 .welcome-list figure div:hover{
-    background-color: #ff402e;
+/*    background-color: #ff402e;*/
     background-color: #F2311F;
 }
 
 .welcome-list figure i.g-icon{
     display: inline-block;
     position: relative;
-    top: 18px;
+    top: 17px;
     vertical-align: middle;
-    height: 54px;
+/*    height: 54px;
     width: 54px;
     border-radius: 27px;
-    background-color: #ff402e;
-    -webkit-box-shadow: inset 0 1px 2px #dd0000;
-    -moz-box-shadow: inset 0 1px 2px #dd0000;
-    box-shadow: inset 0 1px 2px #dd0000;
+    background-color: #1c1c1c;
+    -webkit-box-shadow: inset 0 1px 2px #000;
+    -moz-box-shadow: inset 0 1px 2px #000;
+    box-shadow: inset 0 1px 2px #000;*/
 }
 
 .welcome-list figure i.g-icon:hover{
-    background-color: #FC9494;
-    background-color: #bbbbbb;
-    -webkit-box-shadow: inset 0 1px 2px #dd0000;
+   /* background-color: #FC9494;*/
+    background-color: transparent;
+  /*  -webkit-box-shadow: inset 0 1px 2px #dd0000;
     -moz-box-shadow: inset 0 1px 2px #dd0000;
-    box-shadow: inset 0 1px 2px #dd0000;
+    box-shadow: inset 0 1px 2px #dd0000;*/
 }
 
 .welcome-list figure i.g-icon:before {
@@ -4258,16 +4283,16 @@ header.with-pic-separator .pic-separator::after{
     color: #ffffff;
 }
 
-.welcome-list figure .g-icon-1d:before {
+.welcome-list figure .g-icon-1d i:before {
     content: '\f108';
 }
-.welcome-list figure .g-icon-1b:before {
+.welcome-list figure .g-icon-1b i:before {
     content: '\f461';
 }
-.welcome-list figure .g-icon-1c:before {
+.welcome-list figure .g-icon-1c i:before {
     content: '\f225';
 }
-.welcome-list figure .g-icon-1a:before {
+.welcome-list figure .g-icon-1a i:before {
     content: '\f468';
 }
 
@@ -4277,6 +4302,10 @@ header.with-pic-separator .pic-separator::after{
 .frontstory{
   /*  background: url('http://localhost/wp45/wp-content/uploads/2016/07/frontstory.jpg') no-repeat left center;*/
     background: url('http://localhost/wp45/wp-content/uploads/2016/08/bgstory2.jpg') no-repeat center center;
+}
+
+.frontstory h3{
+    color: #fff;
 }
 
 .frontstory .opacityblack{
@@ -4300,21 +4329,21 @@ header.with-pic-separator .pic-separator::after{
 
 /* Section Restaurant-Menu */
 
-.frontmenu{
-    background-color: #333344;
+.frontmenu, .frontnews{
+    background-color: #302d34;
     color: #fff;
 }
 
 .frontmenu-header-container{
-    padding-bottom: 17px;
+    padding-bottom: 57px;
 }
 
 .frontmenu header{
     margin-bottom: 23px;
 }
 
-.frontmenu nav{
-    padding: 20px 0 25px 0;
+.frontmenu p{
+    padding: 20px 0 0px 0;
 }
 
 .frontmenu-content{
@@ -4346,6 +4375,29 @@ header.with-pic-separator .pic-separator::after{
     position: relative;
 }
 
+/* slider plugin [WPB WooCommerce Product slider  v. 1.0.7 ] */
+
+.wpb_slider_area h3.wpb_area_title{
+    text-transform: uppercase;
+    margin: 0 0 0;
+}
+
+.owl-theme .owl-controls {
+    margin-top: 0px;
+}
+
+/* Section Frontholidays */
+
+.frontholidays{
+    margin-bottom: 90px;
+    text-align: center;
+}
+
+.frontholidays p{
+    margin-top: 50px;
+    margin-bottom: 10px;
+}
+
 
 /* Section Frontsales */
 
@@ -4361,9 +4413,10 @@ header.with-pic-separator .pic-separator::after{
 
 .frontreservations{
     width: 100%;
-   /* background: url('http://localhost/wp45/wp-content/uploads/2016/07/frontstory.jpg') no-repeat center center;*/
+   /* background: url('http://localhost/wp45/wp-content/uploads/2016/07/frontstory.jpg') no-repeat center center;
     background: url('http://localhost/wp45/wp-content/uploads/2016/08/features_bg.jpg') top left;
-    background: url('http://localhost/wp45/wp-content/uploads/2016/08/bg_reserv.jpg') top left;
+    background: url('http://localhost/wp45/wp-content/uploads/2016/08/bg_reserv.jpg') top left;*/
+    background: url('http://localhost/wp45/wp-content/uploads/2016/08/Herbs45.jpg') top center;
 }
 .frontreservations .content-width{
     padding-bottom: 38px;
@@ -4406,7 +4459,64 @@ select.redi-reservation-select{
     max-width: 300px;
 }
 
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"]{
+    background: #007acc none repeat scroll 0 0;
+    border: 0 none;
+    border-radius: 2px;
+    color: #000;
+}
+button, button[disabled]:hover,
+button[disabled]:focus,
+input[type="button"]:focus,
+input[type="button"]:hover,
+input[type="reset"]:hover,
+input[type="reset"]:focus,
+input[type="submit"]:hover,
+input[type="submit"]:focus{
+    background: #007acc none repeat scroll 0 0;
+    border: 0 none;
+    color: #fff;
+}
+
+#redi-reservation .cancel-reservation{
+    font-size: 1.2em;
+    color: #ddd;
+    text-decoration: underline;
+}
+#redi-reservation .cancel-reservation:hover{
+    color: #007acc;
+}
+
+/*.redi-restaurant-time-button[select="select"], .redi-restaurant-button[select="select"] {
+    background-color: #8fc895 !important;
+}*/
+
 /* Section Frontnews */
+
+li.news-item.item1{
+    background: url(http://localhost/wp45/wp-content/uploads/2016/07/menu1.jpg) no-repeat top center;
+
+}
+li.news-item h3{
+    height: 145px;
+}
+
+li.news-item.item2{
+    background: url(http://localhost/wp45/wp-content/uploads/2016/07/menu3.jpg) no-repeat top center;
+    height: 145px;
+}
+li.news-item.item3{
+    background: url(http://localhost/wp45/wp-content/uploads/2016/07/menu5.jpg) no-repeat top center;
+    height: 145px;
+}
+li.news-item.item3{
+    background: url(http://localhost/wp45/wp-content/uploads/2016/07/menu2.jpg) no-repeat top center;
+    height: 145px;
+}
+
 
 
 
@@ -4416,6 +4526,7 @@ select.redi-reservation-select{
 
 .frontcontacts{
     background-color: #ff402e;
+    background-color: #e32201;
     color: #fff;
     padding-bottom: 60px;
 }

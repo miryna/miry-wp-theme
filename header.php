@@ -31,8 +31,9 @@
             <?php if ( is_front_page() ) : ?>
             <div class="site-header-image-front">
 
+                <?php echo do_shortcode("[rev_slider frontheader1]"); ?>
                 <!-- plugin [Slider Ultimate 1.0.1]-->
-                <?php echo do_shortcode("[ultimate-slider]"); ?>
+                <?php /* echo do_shortcode("[ultimate-slider]"); */ ?>
 
             </div><!--.site-header-image-front-->
 
@@ -91,6 +92,7 @@
 
 
 		</header><!--header -->
+
 
 
         <div id="content" class="site-content">

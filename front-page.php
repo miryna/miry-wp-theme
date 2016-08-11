@@ -11,7 +11,7 @@ get_header(); ?>
 
 <div id="primary" class="front-content">
 	<main id="main" class="site-main front-landing" role="main">
-	
+
 		<?php
 		
 		// Include the page content template.
@@ -24,7 +24,7 @@ get_header(); ?>
 		get_template_part( 'template-parts/content', 'frontmenu' );
 
 		// Include the page content template.
-        get_template_part( 'template-parts/content', 'frontsales' );
+        get_template_part( 'template-parts/content', 'frontholidays' );
 
 		// Include the page content template.
 		get_template_part( 'template-parts/content', 'frontreservations' );
@@ -40,6 +40,8 @@ get_header(); ?>
         endwhile;
 
 		
+        // Include the page content template.
+        get_template_part( 'template-parts/content', 'frontsales' );
         // Include the page content template.
         get_template_part( 'template-parts/content', 'frontcontacts' );
 

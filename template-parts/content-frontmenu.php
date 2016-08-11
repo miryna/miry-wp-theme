@@ -10,14 +10,18 @@
 
 <section id="frontmenu" class="frontmenu frontbgdark">
 
-    <div class="frontmenu-header-container textalign-center">
+    <div class="frontmenu-header-container content-width textalign-center">
         <header class="entry-header with-pic-separator">
             <h2>МЕНЮ</h2>
             <span class="pic-separator"></span>
         </header>
 
-        <nav class="">СУПЫ    МЯСНЫЕ БЛЮДА   САЛАТЫ   РЫБНЫЕ БЛЮДА</nav>
-        </div>
+        <p class="">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+
+        <p class="">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+
+        <p class="">Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+    </div>
 
     <div class="frontmenu-content textalign-center">
 
@@ -61,8 +65,8 @@
 
         </div> -->
 
-	    <?php echo do_shortcode("[wpb-latest-product title='Latest Product']"); ?>
-	    <?php echo do_shortcode('[wpb-feature-product title="Feature Products"]'); ?>
+	    <?php echo do_shortcode("[wpb-latest-product title='Наши хиты']"); ?>
+	    <?php echo do_shortcode('[wpb-feature-product title="Средиземноморская кухня"]'); ?>
 
 
     </div> <!--.frontmenu-content -->
