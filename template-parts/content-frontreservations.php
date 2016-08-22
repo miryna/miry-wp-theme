@@ -1,6 +1,6 @@
 <?php
 /**
- * The template used for displaying page content
+ * The template used for displaying frontpage section
  *
  * @package WordPress
  * @subpackage miry
@@ -8,7 +8,7 @@
  */
 ?>
 
-<section id="frontreservations" class="frontreservations frontbgdark">
+<section id="frontreservations" class="frontreservations frontbgdark"><a id="reservation" name="reservation"></a>
     <div> <!-- class="opacityblack" -->
         <div class="content-width">
 
@@ -17,23 +17,6 @@
                 <span class="pic-separator pic-darkbg"></span>
             </header>
 
-                    <!--
-                    <div class="">
-                        <form action="" >
-                            <label><input type="text" name="s1" value="Сегодня"> Ваши пожелания:</label>
-                            <label><input type="text" name="s1" value="Сегодня">Ваши пожелания:</label>
-                            <textarea name="comment" cols="40" rows="2"></textarea>
-                            <input type="submit" name="s1" value="Заказать">
-                        </form>
-
-                        Такой текст также называется как заполнитель.
-                        Это очень удобный инструмент для моделей (макетов).
-                        Он помогает выделить визуальные элементы в документе или презентации, например текст, шрифт или разметка.
-                        Такой текст также называется как заполнитель.
-                        Это очень удобный инструмент для моделей (макетов).
-                        Он помогает выделить визуальные элементы в документе или презентации, например текст, шрифт или разметка.
-                    </div> -->
- 
         <?php echo do_shortcode("[redirestaurant]"); ?>
 
        </div><!-- .content-width -->

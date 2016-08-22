@@ -38,7 +38,7 @@
 				</nav><!-- .social-navigation -->
 			<?php endif; ?>
 
-			<div class="site-info">
+			<div class="site-info textalign-center">
 				<?php
 					/**
 					 * Fires before the miry footer text for footer customization.
@@ -47,8 +47,8 @@
 					 */
 					do_action( 'miry_credits' );
 				?>
-				<span class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></span>
-				<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'miry' ) ); ?>"><?php printf( __( 'Proudly powered by %s', 'miry' ), 'WordPress' ); ?></a>
+				<span class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></span><span>upifix -  webwalker.kharkov 2016</span>
+
 			</div><!-- .site-info -->
 		</footer><!-- .site-footer -->
 <!-- </div> .site-inner -->

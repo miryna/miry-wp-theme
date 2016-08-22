@@ -1,26 +1,20 @@
 <?php
 /**
- * The template used for displaying page content
+ * The template used for displaying frontpage section
  *
- * @package WordPress
  * @subpackage miry
  * @since miry 1.0
  */
 ?>
 
-
-
-<section id="frontnews" class="frontnews frontbgdark">
-
+<section id="frontnews" class="frontnews frontbgdark"><a id="news" name="news"></a>
 
     <header class="entry-header textalign-center with-pic-separator">
         <h2>НОВОСТИ</h2>
         <span class="pic-separator pic-darkbg"></span>
     </header>
 
-<!---->
 <?php
-
 
 $args = array(
     'category_name' => 'news',
@@ -32,25 +26,40 @@ $args = array(
     'nopaging' => true
 );
 
-// Собственный запрос.
 $query = new WP_Query( $args );
 
-// Проверка на наличие результата.
 if ( $query->have_posts() ) {
 
-    echo '<ul  id="news-accordion" class="accordion">';
+    echo '<ul id="news-accordion" class="accordion">';
 
-    // Прохождение по результатам в цикле.
+    $counter = 0;
+
     while ( $query->have_posts() ) {
+        $counter++;
         $query->the_post();
-        ?>
+?>
+        <li class="news-item item<?php echo $counter;?> ">
 
-        <li <?php post_class( 'news-item item1' ); ?>>
-            <?php the_title( '<h3 class="opacityblack hover-red"><div class="content-width">', '</div></h3>' ); ?>
+            <h3>
+                <div class="opacityblack hover-red">
+                    <div class="news-item-head content-width">
 
-            <div class="panel loading">
-                <?php   the_content(); ?>
+                        <div  class="news-item-date textalign-center">
+                            <?php miry_frontnews_date(); ?>
+                        </div>
+
+                        <div class="news-item-title">
+                            <?php the_title( '', '' ); ?>
+                        </div>
+
+                    </div>
+                </div>
+            </h3>
+
+            <div class="panel loading content-width">
+                <?php the_excerpt() ?>
             </div>
+
         </li>
     <?php
     }
@@ -61,11 +70,7 @@ if ( $query->have_posts() ) {
 // Восстановление оригинальных данных запроса.
 wp_reset_postdata();
 
-
 ?>
-<!---->
-
-<!---->
 
     <script type="text/javascript">
         jQuery(document).ready(function( $ ) {
@@ -77,8 +82,19 @@ wp_reset_postdata();
 
     </script>
 
-<!---->
-
-
-
 </section><!-- .frontnews -->
+
+<!--
+           <div  class="news-item-date textalign-center">
+                    <?php miry_frontnews_date(); ?>
+           </div>
+-->
+
+                <?php  /*
+                 // Вывод контента полностью
+                 the_content();
+
+                // Вывод ссылки 'Read more'
+                 echo '<a href="' . get_permalink() . '">' . __( 'Read more', 'miry' ) . '</a>';
+               */ ?>
+

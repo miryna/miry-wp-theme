@@ -2,51 +2,68 @@
 /**
  * The template for displaying front landing page
  *
- * @package WordPress
- * @subpackage miry
  * @since miry 1.0
  */
 
 get_header(); ?>
+
+<?php
+/**
+* Output of Frontpage sections administered as posts of category "Frontpage" in status "draft"
+*/
+    $args = array(
+        'category_name' => 'frontpage',
+        'post_type' => 'post',
+        'post_status' => 'draft',
+        'nopaging' => true
+    );
+
+    $query = new WP_Query( $args );
+
+    if ( $query->have_posts() ) {
+
+    // Прохождение по результатам в цикле.
+        while ( $query->have_posts() ) {
+            $query->the_post();
+
+            $fs_title = get_the_title();
+            $fs_content = get_the_content();
+
+            // Associative array contains the content of frontpage sections
+            $front_sections[ $fs_title ] = $fs_content;
+        }
+    }
+?>
+
 
 <div id="primary" class="front-content">
 	<main id="main" class="site-main front-landing" role="main">
 
 		<?php
 		
-		// Include the page content template.
-		get_template_part( 'template-parts/content', 'frontwelcome' );
+        echo $front_sections['Frontwelcome'];
 
-		// Include the page content template.
-		get_template_part( 'template-parts/content', 'frontstory' );
-		
-		// Include the page content template.
-		get_template_part( 'template-parts/content', 'frontmenu' );
+        echo $front_sections['Frontstory'];
 
-		// Include the page content template.
-        get_template_part( 'template-parts/content', 'frontholidays' );
+        //Include the content template with shortcode.
+        get_template_part( 'template-parts/content', 'frontmenu' );
 
-		// Include the page content template.
+        echo $front_sections['Frontholidays'];
+
+		// Include the content template with shortcodes.
 		get_template_part( 'template-parts/content', 'frontreservations' );
 
-		// Include the page content template.
+		// Include the blog template.
 		get_template_part( 'template-parts/content', 'frontnews' );
 
+        echo $front_sections['Frontsales'];
 
-        // Start the loop.
-        while ( have_posts() ) : the_post();
-            //  Content output of this page
-            // End of the loop.
-        endwhile;
+        echo $front_sections['Frontcontacts'];
 
-		
-        // Include the page content template.
-        get_template_part( 'template-parts/content', 'frontsales' );
-        // Include the page content template.
-        get_template_part( 'template-parts/content', 'frontcontacts' );
-
-        // Include the page content template.
+        // Include the content template.
         get_template_part( 'template-parts/content', 'frontmap' );
+
+      /*  echo $front_sections['Frontfooterlinks'];*/
 
         ?>
     </main><!-- main -->

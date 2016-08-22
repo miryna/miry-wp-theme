@@ -118,11 +118,6 @@ function miry_setup() {
 		'chat',
 	) );
 
-	/*
-	 * This theme styles the visual editor to resemble the theme style,
-	 * specifically font, colors, icons, and column width.
-	 */
-	add_editor_style( array( 'css/editor-style.css', miry_fonts_url() ) );
 
 	// Indicate widget sidebars can use selective refresh in the Customizer.
 	add_theme_support( 'customize-selective-refresh-widgets' );
@@ -184,46 +179,7 @@ function miry_widgets_init() {
 }
 add_action( 'widgets_init', 'miry_widgets_init' );
 
-if ( ! function_exists( 'miry_fonts_url' ) ) :
-/**
- * Register Google fonts for miry.
- *
- * Create your own miry_fonts_url() function to override in a child theme.
- *
- * @since miry 1.0
- *
- * @return string Google fonts URL for the theme.
- */
-function miry_fonts_url() {
-	$fonts_url = '';
-	$fonts     = array();
-	$subsets   = 'latin,latin-ext';
 
-	/* translators: If there are characters in your language that are not supported by Merriweather, translate this to 'off'. Do not translate into your own language. */
-	if ( 'off' !== _x( 'on', 'Merriweather font: on or off', 'miry' ) ) {
-		$fonts[] = 'Merriweather:400,700,900,400italic,700italic,900italic';
-	}
-
-	/* translators: If there are characters in your language that are not supported by Montserrat, translate this to 'off'. Do not translate into your own language. */
-	if ( 'off' !== _x( 'on', 'Montserrat font: on or off', 'miry' ) ) {
-		$fonts[] = 'Montserrat:400,700';
-	}
-
-	/* translators: If there are characters in your language that are not supported by Inconsolata, translate this to 'off'. Do not translate into your own language. */
-	if ( 'off' !== _x( 'on', 'Inconsolata font: on or off', 'miry' ) ) {
-		$fonts[] = 'Inconsolata:400';
-	}
-
-	if ( $fonts ) {
-		$fonts_url = add_query_arg( array(
-			'family' => urlencode( implode( '|', $fonts ) ),
-			'subset' => urlencode( $subsets ),
-		), 'https://fonts.googleapis.com/css' );
-	}
-
-	return $fonts_url;
-}
-endif;
 
 /**
  * Handles JavaScript detection.
@@ -243,8 +199,6 @@ add_action( 'wp_head', 'miry_javascript_detection', 0 );
  * @since miry 1.0
  */
 function miry_scripts() {
-	// Add custom fonts, used in the main stylesheet.
-	wp_enqueue_style( 'miry-fonts', miry_fonts_url(), array(), null );
 
 	// Add Genericons, used in the main stylesheet.
 	wp_enqueue_style( 'genericons', get_template_directory_uri() . '/genericons/genericons.css', array(), '3.4.1' );
@@ -285,10 +239,16 @@ function miry_scripts() {
 		'collapse' => __( 'collapse child menu', 'miry' ),
 	));
 
-    // Load the jquery-accordion script for front page.
+    // Load the jquery-accordion & owl-carousel for front page.
     if ( is_front_page()) {
         wp_enqueue_script( 'jquery.accordion.2.0.min', get_template_directory_uri() . '/js/jquery.accordion.2.0.min.js', array( 'jquery' ), '20160412' );
-    }
+
+        wp_enqueue_script( 'owl-carousel-custom', get_template_directory_uri() . '/js/owl-carousel-custom.js', array( 'owl.carousel.min' ), '20160412' );
+
+        wp_enqueue_script( 'owl.carousel.min', get_template_directory_uri() . '/js/owl.carousel.min.js', array( 'jquery' ), '20160412' );
+
+        wp_enqueue_style( 'owl.carousel', get_template_directory_uri() . '/css/owl.carousel.css', array( 'miry-style' ), '20160412' );
+     }
 }
 add_action( 'wp_enqueue_scripts', 'miry_scripts' );
 
@@ -424,3 +384,66 @@ function miry_widget_tag_cloud_args( $args ) {
 	return $args;
 }
 add_filter( 'widget_tag_cloud_args', 'miry_widget_tag_cloud_args' );
+
+/**
+* Deregister unused scripts
+*
+* Remove links  by default in head part of generated page
+ */
+
+remove_action( 'wp_head', 'wp_generator' );
+remove_action( 'wp_head', 'wlwmanifest_link' );
+remove_action( 'wp_head', 'rsd_link' );
+remove_action('wp_head','adjacent_posts_rel_link_wp_head');
+remove_action('wp_head','adjacent_posts_rel_link_wp_head');
+remove_action('wp_head','feed_links_extra', 3);
+remove_action( 'wp_head', 'feed_links', 2 );
+remove_action('xmlrpc_rsd_apis', 'rest_output_rsd');
+remove_action( 'wp_head', 'parent_post_rel_link', 10, 0 );
+remove_action( 'wp_head', 'start_post_rel_link', 10, 0 );
+remove_action( 'wp_head', 'adjacent_posts_rel_link', 10, 0 );
+remove_action('wp_head', 'wp_shortlink_wp_head');
+remove_action('wp_head','rel_canonical');
+
+/* embed video */
+function my_deregister_scripts(){
+ wp_deregister_script( 'wp-embed' );
+}
+add_action( 'wp_footer', 'my_deregister_scripts' );
+
+/* wp-emoji */
+
+remove_action( 'wp_head', 'print_emoji_detection_script', 7 );
+remove_action( 'admin_print_scripts', 'print_emoji_detection_script' );
+remove_action( 'wp_print_styles', 'print_emoji_styles' );
+remove_action( 'admin_print_styles', 'print_emoji_styles' );
+
+// Disable REST API
+ add_filter('rest_enabled', '__return_false');
+
+// Disable events REST API
+ remove_action( 'init', 'rest_api_init' );
+ remove_action( 'rest_api_init', 'rest_api_default_filters', 10, 1 );
+ remove_action( 'parse_request', 'rest_api_loaded' );
+
+// Disable Embeds  REST API
+ remove_action( 'rest_api_init', 'wp_oembed_register_route' );
+ remove_filter( 'rest_pre_serve_request', '_oembed_rest_pre_serve_request', 10, 4 );
+
+// Disable filters REST API
+ remove_action( 'xmlrpc_rsd_apis', 'rest_output_rsd' );
+ remove_action( 'wp_head', 'rest_output_link_wp_head', 10, 0 );
+ remove_action( 'template_redirect', 'rest_output_link_header', 11, 0 );
+ remove_action( 'auth_cookie_malformed', 'rest_cookie_collect_status' );
+ remove_action( 'auth_cookie_expired', 'rest_cookie_collect_status' );
+ remove_action( 'auth_cookie_bad_username', 'rest_cookie_collect_status' );
+ remove_action( 'auth_cookie_bad_hash', 'rest_cookie_collect_status' );
+ remove_action( 'auth_cookie_valid', 'rest_cookie_collect_status' );
+ remove_filter( 'rest_authentication_errors', 'rest_cookie_check_errors', 100 );
+
+//Disable type="application/json+oembed"
+ remove_action( 'wp_head', 'wp_oembed_add_discovery_links' );
+ remove_action( 'wp_head', 'rest_output_link_wp_head' );
+ remove_action( 'template_redirect', 'rest_output_link_header', 11, 0 );
+
+

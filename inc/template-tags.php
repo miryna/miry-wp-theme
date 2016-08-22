@@ -250,3 +250,17 @@ function miry_the_custom_logo() {
 	}
 }
 endif;
+
+/**
+ * Displays the custon date format on the front page.
+ *
+ *
+ * @since miry 1.0
+ *
+ *
+ */
+function miry_frontnews_date() {
+    $frontnews_date = the_date("j F", "<span>","</i>", $echo = false );
+    $frontnews_date = str_ireplace(" ", "</span><br><i>", $frontnews_date);
+    echo $frontnews_date;
+}
