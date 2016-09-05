@@ -2773,6 +2773,14 @@ p > video {
 }
 
 
+.frontstory-content{
+    float: none;
+    width: 100%;
+}
+
+.frontstory .section-inner.frontbglayer{
+    background-image: none;
+}
 
 /**
  * 14.0 - Media Queries
@@ -3046,6 +3054,15 @@ p > video {
         width: 25%;
         margin-right: -1px;
     }
+
+.frontstory .section-inner.frontbglayer{
+    background:url(http://localhost/wp45/wp-content/uploads/2016/08/coock.png) no-repeat  top right;
+}
+
+.frontstory-content{
+    float: left;
+    width: 50%;
+}
 
 
 
@@ -4465,18 +4482,13 @@ header.with-pic-separator .pic-separator::after{
 
 .section-inner.frontbglayer{
     height: 333px;
-    background:url(http://localhost/wp45/wp-content/uploads/2016/08/coock.png) no-repeat  top right;
-}
-
-.frontstory-content{
-    float: left;
-    width: 50%;
 }
 
 .frontstory.frontbgdark header{
    padding-top: 50px;
     padding-bottom: 11px;
 }
+
 
 /* Section Restaurant-Menu */
 
